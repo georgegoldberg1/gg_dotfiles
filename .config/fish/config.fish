@@ -14,10 +14,15 @@ set -g theme_hide_hostname no
 set -g theme_hostname always
 
 # aliases
+if type -q exa
+    alias ll "exa -l -g --icons"
+    alias lla "ll -a"
+else
+    alias ll "ls -l"
+    alias la "ll -a"
+end
+
 alias ls "ls -p -G"
-alias la "ls -A"
-alias ll "ls -l"
-alias lla "ll -A"
 alias g git
 alias gs='git status'
 alias gh='git log'
