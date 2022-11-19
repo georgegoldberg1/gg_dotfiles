@@ -1,0 +1,66 @@
+""" Use this file
+
+To setup this conda environment:
+
+`conda env create -f conda_py311.yml`
+
+The environment will be named as inside this file.
+
+eg `conda activate py311`
+
+Best practice to setup the env, then save the package versions to a separate file for safekeeping in future (as versions are not included here).
+
+`conda list >> conda_py311_versions.txt`
+
+"""
+
+name: py311
+
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+
+dependencies:
+
+  # Python version
+  - python=3.11
+  - pip
+
+  # Code diagnostics
+  - black
+  - flake8
+
+  # Jupyter
+  - notebook
+
+  # Data Manipulation
+  - numpy
+  - pandas
+  - scipy
+  - statsmodels
+  - scikit-learn
+
+  # Visualisation Packages
+  - matplotlib
+  - seaborn
+  - plotly
+  - bokeh
+
+  # Data Read/Write
+  - boto3
+  - xlsxwriter
+  - xlrd
+  - fastparquet
+  - odfpy
+  
+  # Database Connect / SQL
+  - ipython-sql
+  - sqlalchemy
+  - psycopg2
+
+  # App/WebDev
+  #- flask
+  #- dash
+  #- panel
+
