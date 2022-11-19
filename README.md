@@ -12,21 +12,17 @@ Also learned a bit more about LSP from [chris@machine](https://www.youtube.com/w
 
 To make working on python in neovim easier, some features have been included that require extra installs.
 
-`brew install pyright`
+Neovims LSP plugins and "mason" lsp plugins handle the language servers. I've set one up for python and for lua, meaning it will understand these languages.
+These are installed automatically by neovim plugin "mason", but to install manually: `brew install pyright` and `brew install lua-language-server`
 
-always setup a conda env before opening files with flake8 and black installed.
-
-install these in the base conda so even if you want to quickly jump into a python file, you don't require a special project env.
+for code formatting, these are installed inside python environments for each project:
 
 `conda install flake8 black`
 
-these are python version dependant so best to use the correct env if you can.
+and for non python files eg yml, json, markdown and more:
+`brew install fsouza/prettierd/prettierd`
 
-also install `brew install lua-language-server` as lua is the main language used in neovim config files, so it will make everything easier.
-
-and for general code formatting (not python specific) `brew install fsouza/prettierd/prettierd`
-
-Best to use the python specifics for python as they'll nail those bits better. But for json and markdown etc prettierd is great.
+Best to use the python specifics for python as they'll nail those bits better.
 
 ## Setup
 
