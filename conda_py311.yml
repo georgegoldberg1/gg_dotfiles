@@ -1,18 +1,11 @@
-""" Use this file
-
-To setup this conda environment:
-
-`conda env create -f conda_py311.yml`
-
-The environment will be named as inside this file.
-
-eg `conda activate py311`
-
-Best practice to setup the env, then save the package versions to a separate file for safekeeping in future (as versions are not included here).
-
-`conda list >> conda_py311_versions.txt`
-
-"""
+# Use this file to setup a conda environment:
+# 
+# Create it with: `conda env create -f conda_py311.yml`
+#
+# Use it with: `conda activate py311`
+# 
+# Best practice is saving packge versions after creating the env:
+# `conda list >> conda_py311_versions.txt`
 
 name: py311
 
