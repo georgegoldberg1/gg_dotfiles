@@ -26,6 +26,7 @@ alias ls "ls -p -G"
 alias g git
 alias gs='git status'
 alias gh='git log'
+alias gt="git log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%an%C(reset)%C(bold yellow)%d%C(reset) %C(dim white)- %s%C(reset)' --all"
 alias vi='nvim'
 alias red_tree="tree -I '*.pyc' -I '__pycache'"
 
