@@ -15,8 +15,14 @@ set -g theme_hostname always
 
 # aliases
 if type -q exa
-    alias ll "exa -l -g --icons"
-    alias lla "ll -a"
+		alias lA "exa -l --icons --time-style=long-iso"
+		alias ll "lA --no-user --no-permissions --no-time"
+		alias lla "lA -g --octal-permissions -a"
+		alias llmod "lA --no-user --no-permissions --time=modified --sort=time --reverse"
+		alias llcreate "lA --no-user --no-permissions --time=created --sort=time --reverse"
+		alias llopen "lA --no-user --no-permissions --time=accessed --sort=time --reverse"
+    # alias ll "exa -l -g --icons"
+    # alias lla "ll -a"
 else
     alias ll "ls -l"
     alias la "ll -a"
