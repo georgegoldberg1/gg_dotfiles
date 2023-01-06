@@ -1,7 +1,8 @@
 local keymap = vim.keymap
 
 -- new tab
-keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
+--keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
+keymap.set('n', 'te', ':Texplore<Return>', { silent = true })
 -- split window
 keymap.set('n', 'ss', ':split<Return><C-w>w', { silent = true })
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w', { silent = true })
@@ -20,6 +21,3 @@ keymap.set('n', 'sl', '<C-w>l')
 -- keymap.set('n', '<C-s>', '<Plug>MarkdownPreview')
 -- keymap.set('n', '<M-s>', '<Plug>MarkdownPreviewStop')
 -- keymap.set('n', '<C-p>', '<Plug>MarkdownPreviewToggle')
-
-
-
