@@ -25,8 +25,13 @@ packer.startup(function(use)
     use 'williamboman/mason-lspconfig.nvim' -- Manage language server installs
     use 'neovim/nvim-lspconfig' -- Enable LSP
     use 'jose-elias-alvarez/null-ls.nvim' --neovim lang server to inject lsp diagnostics code actions etc
-    use 'glepnir/lspsaga.nvim' -- LSP UIs
-
+    use({
+        "glepnir/lspsaga.nvim",
+        branch = "main",
+        config = function()
+            require('lspsaga').setup({})
+        end,
+    }) -- lsp GUI
     use {
         'nvim-treesitter/nvim-treesitter',
         run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
