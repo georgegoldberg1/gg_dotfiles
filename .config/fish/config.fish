@@ -16,7 +16,8 @@ set -g theme_hostname always
 # aliases
 if type -q exa
 		alias lA "exa -l --icons --time-style=long-iso"
-		alias ll "lA --no-user --no-permissions --no-time"
+		alias ll "exa -l --no-filesize --icons --no-user -RTL=1 --git --group-directories-first --no-permissions --time-style long-iso"
+    #		alias ll "lA --no-user --no-permissions --no-time"
 		alias lla "lA -g --octal-permissions -a"
     alias llt "ll -TRL=1"
     alias llta "ll -TR"
