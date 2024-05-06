@@ -1,0 +1,72 @@
+# Use this file to setup a conda environment:
+#
+# Create it with: `conda env create -f conda_dbt.yml`
+#
+# Use it with: `conda activate dbt`
+#
+# Best practice is saving packge versions after creating the env:
+# `conda list >> conda_dbt_versions.txt`
+#
+# Note: This is designed to do most of what you need.
+# For more specialised modelling packages (eg pymc3), advisable to create a different environment
+# more instructions https://docs.conda.io/projects/conda/en/4.6.0/user-guide/tasks/manage-environments.html
+
+name: dbt
+
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+
+dependencies:
+  # Python version
+  - python=3.11
+  - pip
+  - pip:
+      - dbt-core==1.4.6
+      - dbt-bigquery<1.5.0
+      - shandy-sqlfmt
+
+  # Code diagnostics
+  - black
+  - flake8
+  - autopep8
+  - sqlfluff
+  - pre_commit
+
+  # Jupyter
+  #- notebook
+
+  # PowerPoint
+  #- python-pptx
+
+  # Data Manipulation
+  #- numpy
+  #- pandas
+  #- scipy
+  #- statsmodels
+  #- scikit-learn
+
+  # Visualisation Packages
+  #- matplotlib
+  #- seaborn
+  #- plotly
+  #- bokeh
+
+  # Data Read/Write
+  #(only required for using AWS) - boto3
+  #- xlsxwriter
+  #- openpyxl
+  #- xlrd
+  #- fastparquet
+  #- odfpy
+
+  # Database Connect / SQL
+  #- ipython-sql
+  #- sqlalchemy
+  #- psycopg2
+
+  # App/WebDev
+  #- flask
+  #- dash
+  #- panel

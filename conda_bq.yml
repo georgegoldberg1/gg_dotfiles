@@ -1,0 +1,61 @@
+# Use this file to setup a conda environment:
+#
+# Create it with: `conda env create -f conda_bq.yml`
+#
+# Use it with: `conda activate bq`
+#
+# Best practice is saving packge versions after creating the env:
+# `conda list >> conda_bq_versions.txt`
+
+name: bq
+
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+
+dependencies:
+  # Python version
+  - python=3.11
+  - pip
+
+  # Code diagnostics
+  - black
+  - flake8
+
+  # Jupyter
+  - notebook
+
+  # Data Manipulation
+  - numpy
+  - pandas
+  - scipy
+  - statsmodels
+  - scikit-learn
+
+  # Visualisation Packages
+  - matplotlib
+  - seaborn
+  - plotly
+  - bokeh
+
+  # Data Read/Write
+  - boto3
+  - xlsxwriter
+  - openpyxl
+  - xlrd
+  - fastparquet
+  - odfpy
+
+  # Database Connect / SQL
+  - google-cloud-bigquery
+  - pip:
+    - google-cloud-secret-manager
+  - ipython-sql
+  - sqlalchemy
+  - psycopg2
+
+  # App/WebDev
+  #- flask
+  #- dash
+  #- panel

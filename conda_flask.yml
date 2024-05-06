@@ -1,0 +1,84 @@
+# Use this file to setup a conda environment:
+#
+# Create it with: `conda env create -f conda_flask.yml`
+#
+# Use it with: `conda activate flask`
+#
+# Best practice is saving packge versions after creating the env:
+# `conda list >> conda_bq_versions.txt`
+
+name: flask
+
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+
+dependencies:
+  # Python version
+  - python=3.11
+  - pip
+
+  # Code diagnostics
+  - black
+  - flake8
+
+  # Jupyter
+  - notebook
+
+  # Data Manipulation
+  - numpy
+  - pandas
+
+  # Visualisation Packages
+  - matplotlib
+  - seaborn
+  - plotly
+  - bokeh
+
+  # Data Read/Write
+  - boto3
+  - xlrd
+  - fastparquet
+  - odfpy
+
+  # Database Connect / SQL
+  - google-cloud-bigquery
+  - pip:
+      - google-cloud-secret-manager
+      - Werkzeug==2.3.6
+      - WTForms==3.0.1
+      - Flask==2.3.2
+      - Flask-Caching==2.0.2
+      - Flask-Login==0.6.2
+      - Flask-Mail==0.9.1
+      - Flask-Migrate==4.0.4
+      - flask-restx==1.1.0
+      - Flask-Script==2.0.6
+      - Flask-SQLAlchemy==3.0.5
+      - Flask-User==1.0.2.2
+      - Flask-WTF==1.1.1
+      - SQLAlchemy
+      - requests
+      - email_validator
+      - python-decouple
+      - gunicorn
+      - psycopg2
+      - XlsxWriter
+      - zipp
+      - openpyxl
+      - pandasql
+      - google-cloud
+      - google-cloud-bigquery
+      - google-cloud-storage
+      - pandas-gbq
+      - pydata-google-auth
+      - db-dtypes
+      - db-dtypes
+      - python-dotenv
+  - ipython-sql
+
+  # App/WebDev
+  #- flask
+  #- dash
+  #- panel
