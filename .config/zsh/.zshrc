@@ -110,18 +110,18 @@ source $ZSH/oh-my-zsh.sh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/george.goldberg/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/george.goldberg/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/george.goldberg/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/george.goldberg/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+#__conda_setup="$('/Users/george.goldberg/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/Users/george.goldberg/miniconda3/etc/profile.d/conda.sh" ]; then
+#        . "/Users/george.goldberg/miniconda3/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/Users/george.goldberg/miniconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
+## <<< conda initialize <<<
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -132,3 +132,6 @@ export PATH=$PATH:$HOME/.local/bin
 alias red_tree="tree -I '*.pyc' -I '__pycache__'"
 alias gs="git status"
 alias vi='nvim'
+
+# Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
