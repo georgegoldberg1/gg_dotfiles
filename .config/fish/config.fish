@@ -17,21 +17,27 @@ alias genpass='bash $HOME/.config/utils/genpass.sh'
 
 
 # aliases
-if type -q exa
-		alias lA "exa -l --icons --time-style=long-iso"
-		alias ll "exa -l --no-filesize --icons --no-user -RTL=1 --git --group-directories-first --no-permissions --time-style long-iso"
-    #		alias ll "lA --no-user --no-permissions --no-time"
+if type -q eza
+    alias lA "eza --long --header --inode --git --icons --hyperlink -a"
+    alias ll "eza --long --icons --no-user --git --group-directories-first --no-permissions --time-style long-iso"
+#   #		alias ll "lA --no-user --no-permissions --no-time"
 		alias lla "lA -g --octal-permissions -a"
-    alias llt "ll -TRL=1"
-    alias llta "ll -TR"
-    alias llmod "lA --no-user --no-permissions --time=modified --sort=time --reverse"
-		alias llcreate "lA --no-user --no-permissions --time=created --sort=time --reverse"
-		alias llopen "lA --no-user --no-permissions --time=accessed --sort=time --reverse"
-    # alias ll "exa -l -g --icons"
-    # alias lla "ll -a"
+    alias llsize "eza --total-size --git --icons --long"
+    alias llt "eza --long --tree --level=3"
+    alias llt1 "eza --long --tree --level=1"
+    alias llt2 "eza --long --tree --level=2"
+    alias llt3 "eza --long --tree --level=3"
+    alias llt4 "eza --long --tree --level=4"
+    alias llt5 "eza --long --tree --level=5"
+#   alias llta "ll -TR"
+    alias llmod "lA --no-user --no-permissions --sort=modified --reverse"
+		alias llcreate "lA --no-user --no-permissions --sort=created --reverse"
+		alias llopen "lA --no-user --no-permissions --sort=accessed --reverse"
+#    # alias ll "exa -l -g --icons"
 else
     alias ll "ls -l"
     alias la "ll -a"
+    alias lla "ll -a"
 end
 
 alias ls "ls -p -G"
@@ -58,8 +64,8 @@ fish_add_path --append ~/.local/bin
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-#eval /opt/homebrew/anaconda3/bin/conda "shell.fish" "hook" $argv | source
-eval ~/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+eval /opt/homebrew/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+#eval ~/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
 

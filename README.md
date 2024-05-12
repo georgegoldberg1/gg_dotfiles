@@ -12,11 +12,13 @@ Also learned a bit more about LSP from [chris@machine](https://www.youtube.com/w
 
 `vi` to start neovim
 (Ignore >< brackets below, they are to signify keypresses, not typed text)
+
 - `<te>` to open new buffer in a new tab (Tab to navigate between)
 - `<ss>`/`<sv>` horizontal/vertical splitscreens
 - `<sl>`/`<sh>`/`<sj>`/`<sk>` jump to split right/left/down/up
 
 Telescope keybinds:
+
 - `<sf>` file browser
 - `<;t>` help docs
 - `<;;>` search buffers
@@ -24,6 +26,7 @@ Telescope keybinds:
 - `<T>` bring up terminal window
 
 Python debugging:
+
 - `<;e>` list and navigate all errors/diagnostics
 - `<[e>`/`<]e>` go to prev/next error
 - `<K>` hover doc for functions (non-editable, closes when you move cursor) (`:TSInstall markdown-inline` if you get an error)
@@ -79,7 +82,7 @@ Restart terminal
 faster shell startup than "oh-my-fish"
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fisher install oh-my-fish/theme-bobthefish https://github.com/oh-my-fish/theme-bobthefish
-brew install exa (better version of "ls" command) then out a config-osx.fish file in ~/.config/fish/
+brew install eza (better version of "ls" command) then put a config-osx.fish file in ~/.config/fish/
 
 (OR zsh chsh /bin/zsh AND oh-my-zsh and powerline 10k (P10k config))
 
