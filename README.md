@@ -8,6 +8,31 @@ This is mostly a recreation from Takuya Matsuyama's setup ([YouTube](https://www
 
 Also learned a bit more about LSP from [chris@machine](https://www.youtube.com/watch?v=b7OguLuaYvE&ab_channel=chris%40machine)
 
+## Getting Started + Tips
+
+`vi` to start neovim
+(Ignore >< brackets below, they are to signify keypresses, not typed text)
+- `<te>` to open new buffer in a new tab (Tab to navigate between)
+- `<ss>`/`<sv>` horizontal/vertical splitscreens
+- `<sl>`/`<sh>`/`<sj>`/`<sk>` jump to split right/left/down/up
+
+Telescope keybinds:
+- `<sf>` file browser
+- `<;t>` help docs
+- `<;;>` search buffers
+- `:bd` delete current buffer
+- `<T>` bring up terminal window
+
+Python debugging:
+- `<;e>` list and navigate all errors/diagnostics
+- `<[e>`/`<]e>` go to prev/next error
+- `<K>` hover doc for functions (non-editable, closes when you move cursor) (`:TSInstall markdown-inline` if you get an error)
+- `<gp>` preview function definition (i to open/edit, :q to close)
+- `<gd>` show function declaration and uses in files (i to open/edit, :q to close)
+- `<gr>` rename function (and all uses of it)
+
+Add / remove language support in the file .config/nvim/after/plugins/treesitter.rc.lua
+
 ## Pre-setup
 
 To make working on python in neovim easier, some features have been included that require extra installs.
@@ -143,6 +168,6 @@ Best to use the python specifics for python as they'll nail those bits better.
 
 and use with "EXA" can be be installed via homebrew and allows the displaying of "ls" alternatives with fish shell.
 
-Requires Neovim 0.8
+Requires Neovim 0.9
 
-**Last updated Nov 2022**
+**Last updated Jun 2023**

@@ -1,13 +1,13 @@
 # Use this file to setup a conda environment:
-# 
-# Create it with: `conda env create -f conda_py311.yml`
 #
-# Use it with: `conda activate py311`
-# 
+# Create it with: `conda env create -f conda_bq.yml`
+#
+# Use it with: `conda activate bq`
+#
 # Best practice is saving packge versions after creating the env:
-# `conda list >> conda_py311_versions.txt`
+# `conda list >> conda_bq_versions.txt`
 
-name: py311
+name: bq
 
 channels:
   - conda-forge
@@ -15,7 +15,6 @@ channels:
   - defaults
 
 dependencies:
-
   # Python version
   - python=3.11
   - pip
@@ -44,12 +43,14 @@ dependencies:
   - boto3
   - xlsxwriter
   - openpyxl
-  - xlwings
   - xlrd
   - fastparquet
   - odfpy
-  
+
   # Database Connect / SQL
+  - google-cloud-bigquery
+  - pip:
+    - google-cloud-secret-manager
   - ipython-sql
   - sqlalchemy
   - psycopg2
@@ -58,4 +59,3 @@ dependencies:
   #- flask
   #- dash
   #- panel
-

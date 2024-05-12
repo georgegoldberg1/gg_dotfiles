@@ -18,6 +18,7 @@ ts.setup {
         "json",
         "lua",
         "markdown",
+        "markdown_inline",
         "python",
         "r",
         "sql",
@@ -28,4 +29,3 @@ ts.setup {
         enable = true,
     },
 }
-

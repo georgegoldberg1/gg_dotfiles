@@ -13,6 +13,9 @@ set -g theme_display_user yes
 set -g theme_hide_hostname no
 set -g theme_hostname always
 
+alias genpass='bash $HOME/.config/utils/genpass.sh'
+
+
 # aliases
 if type -q exa
 		alias lA "exa -l --icons --time-style=long-iso"
@@ -35,8 +38,11 @@ alias ls "ls -p -G"
 alias g git
 alias gs='git status'
 #alias gh='git log'
-alias gh="git log --date=format:'%Y-%m-%d|%H-%M-%S' --format='%ad|%an|%s(white)'"
+alias gh="git log --date=format:'%Y-%m-%d|%H:%M:%S' --format='%ad|%an|%s'"
 alias gt="git log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%an%C(reset)%C(bold yellow)%d%C(reset) %C(dim white)- %s%C(reset)' --all"
+
+alias gitchart="bash $HOME/.config/utils/gitlog.sh"
+
 alias vi='nvim'
 alias red_tree="tree -I '*.pyc' -I '__pycache'"
 
@@ -52,7 +58,8 @@ fish_add_path --append ~/.local/bin
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-eval /opt/homebrew/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+#eval /opt/homebrew/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+eval ~/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
 
