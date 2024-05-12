@@ -55,3 +55,5 @@ fish_add_path --append ~/.local/bin
 eval /opt/homebrew/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
+
+source ~/.docker/init-fish.sh || true # Added by Docker Desktop
