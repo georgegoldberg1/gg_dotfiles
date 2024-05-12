@@ -121,9 +121,10 @@ And lspsaga.rc.lua
 Brew install karabiner-elements --cask (for mapping keys)??? He swaps caps lock with control key. Can set up fn + h j k l as arrows (so you can use vim practice in other apps like Jupyter to get used to it faster)
 Inkdrop is the name of this guys paid markdown app (devaslife YouTuber) Takuya Matsuyama from Japan.
 
-## fonts etc
+## fonts/icons/colours etc
 
-- Install powerline nerd fonts
+- Install Meslo Nerd Font + icons/glyphs: "MesloLGSDZNerdFont-Regular.ttf"
+- Open Iterm2 > Settings > Profiles > Other Actions > Import Json Profile: "DefaultProfile.json"
 - Solarised dark theme
 - Use dark background so you can add transparency and blur without it being distracting
 
