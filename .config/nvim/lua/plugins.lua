@@ -18,9 +18,11 @@ packer.startup(function(use)
     }
     use 'onsails/lspkind-nvim' --vscode like pictograms
     use 'nvim-lua/plenary.nvim'
+    use { 'L3MON4D3/LuaSnip' }
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/nvim-cmp'
+    use { 'saadparwaiz1/cmp_luasnip' }
     use 'williamboman/mason.nvim' -- Manage language server installs
     use 'williamboman/mason-lspconfig.nvim' -- Manage language server installs
     use 'neovim/nvim-lspconfig' -- Enable LSP
@@ -34,13 +36,17 @@ packer.startup(function(use)
     }) -- lsp GUI
     use {
         'nvim-treesitter/nvim-treesitter',
-        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+        run = function()
+            require('nvim-ts-autotag').setup()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
     }
     use 'kyazdani42/nvim-web-devicons' -- File icons
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-telescope/telescope-file-browser.nvim'
     use 'windwp/nvim-autopairs'
-    use 'windwp/nvim-ts-autotag' --ts=treesitter (autoclose html tags)
+    --use 'windwp/nvim-ts-autotag' --ts=treesitter (autoclose html tags)
     use 'norcalli/nvim-colorizer.lua'
     use 'akinsho/nvim-bufferline.lua'
 

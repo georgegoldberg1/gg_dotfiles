@@ -2,7 +2,7 @@ local status, n = pcall(require, "neosolarized")
 if (not status) then return end
 
 n.setup({
-  comment_italics = true,
+    comment_italics = true,
 })
 
 local cb = require('colorbuddy.init')
@@ -17,15 +17,21 @@ Group.new('CursorLine', colors.none, colors.base03, styles.NONE, colors.base1)
 Group.new('CursorLineNr', colors.yellow, colors.black, styles.NONE, colors.base1)
 Group.new('Visual', colors.none, colors.base03, styles.reverse)
 
-local cError = groups.Error.fg
-local cInfo = groups.Information.fg
-local cWarn = groups.Warning.fg
-local cHint = groups.Hint.fg
+local cError = colors.red:light() --groups.Error.fg
+local cInfo = colors.yellow:light() --groups.Information.fg
+local cWarn = colors.orange:light() --groups.Warning.fg
+local cHint = colors.grey:light() --groups.Hint.fg
 
-Group.new("DiagnosticVirtualTextError", cError, cError:dark():dark():dark():dark(), styles.NONE)
-Group.new("DiagnosticVirtualTextInfo", cInfo, cInfo:dark():dark():dark(), styles.NONE)
-Group.new("DiagnosticVirtualTextWarn", cWarn, cWarn:dark():dark():dark(), styles.NONE)
-Group.new("DiagnosticVirtualTextHint", cHint, cHint:dark():dark():dark(), styles.NONE)
+
+--Group.new('Error'           , colors.red:light() , nil               , styles.bold)
+Group.new("DiagnosticVirtualTextError", cError, nil, styles.NONE)
+Group.new("DiagnosticVirtualTextInfo", cInfo, nil, styles.NONE)
+Group.new("DiagnosticVirtualTextWarn", cWarn, nil, styles.NONE)
+Group.new("DiagnosticVirtualTextHint", cHint, nil, styles.NONE)
+--Group.new("DiagnosticVirtualTextError", cError, cError:dark():dark():dark():dark(), styles.NONE)
+--Group.new("DiagnosticVirtualTextInfo", cInfo, cInfo:dark():dark():dark(), styles.NONE)
+--Group.new("DiagnosticVirtualTextWarn", cWarn, cWarn:dark():dark():dark(), styles.NONE)
+--Group.new("DiagnosticVirtualTextHint", cHint, cHint:dark():dark():dark(), styles.NONE)
 Group.new("DiagnosticUnderlineError", colors.none, colors.none, styles.undercurl, cError)
 Group.new("DiagnosticUnderlineWarn", colors.none, colors.none, styles.undercurl, cWarn)
 Group.new("DiagnosticUnderlineInfo", colors.none, colors.none, styles.undercurl, cInfo)

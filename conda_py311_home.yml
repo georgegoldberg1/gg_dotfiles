@@ -1,0 +1,68 @@
+# Use this file to setup a conda environment:
+#
+# Create with: `conda env create -f conda_py311.yml`
+# Use with: `conda activate py311`
+#
+# Backup to file: `conda env export > conda_py311_frozen.yml` OR (messier): `conda list >> conda_py311_versions.txt`
+# Backup to cloned env: `conda create -n py311_backup --clone py311`
+# Update/reinstall it with: `conda env create -f conda_py311.yml --force`
+# Prune/delete old packages (once removed from the file): `conda env update -f conda_py311.yml --prune`
+#
+# Update base conda
+# `conda update -n base -c defaults conda`
+# `conda update -n base -c conda-forge conda`???????
+# `conda update -n base -c anaconda` ??????
+
+name: py311
+
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+
+dependencies:
+  # Python version
+  - python=3.11
+  - pip
+
+  # Code diagnostics
+  - black
+  - flake8
+
+  # Jupyter
+  - notebook
+
+  # Data Manipulation
+  - numpy
+  - pandas
+  - scipy
+  - statsmodels
+  - scikit-learn
+
+  # Visualisation Packages
+  - matplotlib
+  - seaborn
+  - plotly
+  - bokeh
+
+  # Data Read/Write
+  - boto3
+  - xlsxwriter
+  - xlrd
+  - fastparquet
+  - odfpy
+
+  # Database Connect / SQL
+  - ipython-sql
+  - sqlalchemy
+  - psycopg2
+
+  # App/WebDev
+  #- flask
+  #- dash
+  #- panel
+
+  # Data sourcing / web scraping
+  - requests
+  - lxml
+  - bs4

@@ -1,0 +1,61 @@
+# Use this file to setup a conda environment:
+# 
+# Create it with: `conda env create -f conda_py312.yml`
+#
+# Use it with: `conda activate py312`
+# 
+# Best practice is saving packge versions after creating the env:
+# `conda list >> conda_py312_versions.txt`
+
+name: py312
+
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+
+dependencies:
+
+  # Python version
+  - python=3.12
+  - pip
+
+  # Code diagnostics
+  - black
+  - flake8
+
+  # Jupyter
+  - notebook
+
+  # Data Manipulation
+  - numpy
+  - pandas
+  - scipy
+  - statsmodels
+  - scikit-learn
+
+  # Visualisation Packages
+  - matplotlib
+  - seaborn
+  - plotly
+  - bokeh
+
+  # Data Read/Write
+  - boto3
+  - xlsxwriter
+  - openpyxl
+  - xlwings
+  - xlrd
+  - fastparquet
+  - odfpy
+  
+  # Database Connect / SQL
+  - ipython-sql
+  - sqlalchemy
+  - psycopg2
+
+  # App/WebDev
+  #- flask
+  #- dash
+  #- panel
+
